@@ -16,4 +16,5 @@ export class SerieService {
   getSeries(): Observable<Serie[]> {
     return this.http.get<Serie[]>(this.apiUrl);
   }
+
 }

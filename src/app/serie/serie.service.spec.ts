@@ -26,7 +26,7 @@ describe('BookListComponent', () => {
    fixture = TestBed.createComponent(SerieComponent);
    component = fixture.componentInstance;
    component.series = [
-    new Serie(faker.lorem.sentence(), faker.person.fullName(), faker.number.int())
+    new Serie(123, faker.lorem.sentence(), faker.person.fullName(), 8, faker.lorem.sentence())
    ]
 
    fixture.detectChanges();

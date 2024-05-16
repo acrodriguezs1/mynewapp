@@ -10,6 +10,7 @@ import { SerieService } from './serie.service';
 })
 export class SerieComponent implements OnInit {
   series: Array<Serie> = [];
+  promedio: number=0;
   constructor(private serieService: SerieService) { }
   
 
@@ -18,7 +19,16 @@ export class SerieComponent implements OnInit {
       this.series = series;
     });
   }
+  getPromedio(Serie: Serie[]){
+    let prom :number=0
+    Serie.forEach(serie => {
+        prom= prom+serie.seasons
+    });
+
+    this.promedio=prom;
+  }
   ngOnInit() {
     this.getSeries();
+    this.getPromedio(this.series);
   }
 }

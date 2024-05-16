@@ -10,7 +10,9 @@ import { dataSeries } from './serie/dataSeries';
 export class AppComponent {
   title = 'mynewapp';
   series: Array<Serie> = [];
+
   getSerieList(): Array<Serie> {
     return dataSeries;
   }
+
 }
